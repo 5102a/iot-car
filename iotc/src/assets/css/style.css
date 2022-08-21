@@ -1,0 +1,20 @@
+
+@import "./media.css";
+:root {
+  font-size: 16px;
+}
+
+.notify-box{
+  background-color: #f2f9fa;
+  border: 0px;
+  font-size: 18px;
+  font-weight: 700;
+  width: 20vw;
+  z-index: 99999999 !important;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { 
+  background-color: #4488ee33;
+  background-image: none; 
+  color: rgb(0, 0, 0); 
+}
+

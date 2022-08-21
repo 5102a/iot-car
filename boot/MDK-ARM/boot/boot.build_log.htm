@@ -1,0 +1,99 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 5102 5102, 5102, LIC=GE701-CJ4MQ-FZ4WU-SD9FG-XFR8B-NMIEL
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      CMSIS_AGDI.dll V1.21.0.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+E:\desk\code\boot\MDK-ARM\boot.uvprojx
+Project File Date:  03/07/2021
+
+<h2>Output:</h2>
+Build target 'boot'
+compiling esp8266.c...
+..\HARDWARE\ESP8266\esp8266.c(50): warning:  #223-D: function "vsprintf" declared implicitly
+        vsprintf((char*)UART5_TX_BUF,fmt,ap);// 把ap以fmt的格式存入发送缓冲
+..\HARDWARE\ESP8266\esp8266.c(63): warning:  #223-D: function "printf" declared implicitly
+                printf("\r\n-----response-----\r\n%s\r\n-----end----\r\n",UART5_RX_BUF);        //发送到串口pc
+..\HARDWARE\ESP8266\esp8266.c(87): warning:  #223-D: function "printf" declared implicitly
+        printf("\r\nSEND CMD:%s\r\n",cmd);
+..\HARDWARE\ESP8266\esp8266.c(160): warning:  #223-D: function "printf" declared implicitly
+        printf("###【esp8266波特率设置成功】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(208): warning:  #223-D: function "sprintf" declared implicitly
+        sprintf((char*)p,"AT+CWJAP_DEF=\"%s\",\"%s\"",wifista_ssid,wifista_password);
+..\HARDWARE\ESP8266\esp8266.c(231): warning:  #223-D: function "sprintf" declared implicitly
+        sprintf((char*)p,"AT+CIPSTART=\"TCP\",\"%s\",%s,300",remoteIp,remotePort);
+..\HARDWARE\ESP8266\esp8266.c(244): warning:  #223-D: function "printf" declared implicitly
+        printf("###【STA TCP已注册】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(254): warning:  #223-D: function "printf" declared implicitly
+                printf("###【配置模式1失败】###\r\n");return 1;
+..\HARDWARE\ESP8266\esp8266.c(260): warning:  #223-D: function "printf" declared implicitly
+                printf("###【sta模式设置单连接失败】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(268): warning:  #223-D: function "printf" declared implicitly
+                printf("###【AT+CWSTOPSMART失败】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(277): warning:  #223-D: function "printf" declared implicitly
+                        printf("###【SmartConfig配网失败】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(284): warning:  #223-D: function "printf" declared implicitly
+                        printf("###【AT+CWSTOPSMART失败】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(295): warning:  #223-D: function "printf" declared implicitly
+                        printf("###【sta模式连接wifi失败】###\r\n");return 1;
+..\HARDWARE\ESP8266\esp8266.c(309): warning:  #223-D: function "printf" declared implicitly
+                printf("###【sta tcp注册失败】###\r\n");return 1;
+..\HARDWARE\ESP8266\esp8266.c(315): warning:  #223-D: function "printf" declared implicitly
+                printf("###【设置透传失败】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(329): warning:  #223-D: function "printf" declared implicitly
+      printf("###【change uart5 BaudRate fail】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(332): warning:  #223-D: function "printf" declared implicitly
+        printf("###【change uart5 BaudRate:%d success】###",baudRate);
+..\HARDWARE\ESP8266\esp8266.c(342): warning:  #223-D: function "printf" declared implicitly
+                printf("###【change esp8266 BaudRate fail】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(345): warning:  #223-D: function "printf" declared implicitly
+        printf("###【change esp8266 BaudRate:%s success】###",baudRate);
+..\HARDWARE\ESP8266\esp8266.c(372): warning:  #223-D: function "printf" declared implicitly
+        printf("###【wifi2通信成功】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c(381): warning:  #223-D: function "printf" declared implicitly
+        printf("###【bootloader初始化】###\r\n");
+..\HARDWARE\ESP8266\esp8266.c: 21 warnings, 0 errors
+linking...
+Program Size: Code=15780 RO-data=492 RW-data=52 ZI-data=126924  
+FromELF: creating hex file...
+"boot\boot.axf" - 0 Error(s), 21 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM::CMSIS:CORE:5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+<h2>Collection of Component include folders:</h2>
+  E:\desk\code\boot\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+      Source file:   CMSIS\Core\Template\ARMv8-M\tz_context.c
+      Source file:   CMSIS\Core\Template\ARMv8-M\main_s.c
+</pre>
+</body>
+</html>
